@@ -5,7 +5,6 @@ Predicting which local areas will become crime hotspots next month, explaining w
 **MSc Data Analytics (Distinction), De Montfort University (2026)** · Supervisor: Dr Waddah Saeed
 
 ![Power BI hotspot map](dashboard_map.png)
-<!-- Add your Power BI screenshots: dashboard_map.png, dashboard_overview.png, dashboard_performance.png -->
 
 ## Key findings
 - **Recent history predicts hotspots best.** An area's average crime over the previous 3 months was the strongest feature in all four models (SHAP).
@@ -53,6 +52,15 @@ The cleaned records were aggregated into an **LSOA-month panel**: 2,711 areas (1
 | West Midlands | Random Forest | 77.39 | 68.54 | **72.70** | 93.73 | 83.75 |
 | West Midlands | XGBoost | 65.23 | 77.79 | 70.96 | 92.99 | 81.87 |
 
+## Power BI dashboard
+**Overview:** model metrics, monthly crime trend and crime by offence type
+
+![Dashboard overview](dashboard_overview.png)
+
+**Model performance:** Random Forest vs XGBoost metrics and confusion-matrix outcomes
+
+![Model performance](dashboard_performance.png)
+
 ## Limitations
 Recorded crime only (reflects reporting and enforcement), approximate anonymised locations, no contextual data such as population or deprivation, and the dashboard is a prototype that has not been user-tested.
 
@@ -60,11 +68,13 @@ Recorded crime only (reflects reporting and enforcement), approximate anonymised
 Python (pandas, scikit-learn, XGBoost, SHAP, LIME, Matplotlib), Power BI
 
 ## Repository contents
-<!-- Update to match the files you upload -->
 | File | Description |
 |---|---|
-| `notebooks/` | Data cleaning, feature engineering, modelling and explainability |
-| `dashboard_*.png` | Power BI dashboard screenshots |
+| `Crime_Hotspot_Analysis.ipynb` | Full pipeline: data cleaning, feature engineering, modelling and explainability (SHAP, LIME) |
+| `Dissertation__PowerBI.pbix` | Power BI dashboard (open in Power BI Desktop) |
+| `dashboard_*.png` | Dashboard screenshots |
+
+The raw UK Police CSV files are not included; download them from [data.police.uk](https://data.police.uk).
 
 ## Author
 **Affan Ahmad Khan** · [LinkedIn](https://www.linkedin.com/in/affanahmad66/)
